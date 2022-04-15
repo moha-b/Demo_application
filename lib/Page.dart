@@ -2,14 +2,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class page extends StatefulWidget {
+class PageK extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return PageState();
   }
 }
 
-class PageState extends State<page> {
+class PageState extends State<PageK> {
 
   BoxShadow them = BoxShadow(
   color: Colors.grey.withOpacity(.5),
@@ -25,17 +25,14 @@ class PageState extends State<page> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
+    return DefaultTabController(
           length: 4,
           child: Scaffold(
             body: Container(
-              color: Color(0xFF02020A),
-              child: Container(
                 margin: EdgeInsets.all(30),
                 child: Column(
                   children: [
-                    SizedBox(height: 40,),
+                    SizedBox(height: 50,),
                     Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -59,42 +56,42 @@ class PageState extends State<page> {
                       Tab(icon: Icon(Icons.fingerprint_sharp,color: Color(0xFFC988EB),),),
                       Tab(icon: Icon(Icons.map,color: Color(0xFFC988EB),),),
                     ]),
-                    SizedBox(
-                      height: 500,
-                      child: TabBarView(
-                        children: [
-                          Container(child: GridView.count(
-                            crossAxisCount: 2,crossAxisSpacing: 40,
-                            children: [
-                            Container(
-                              decoration: decoration,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                    Wrap(
+                      children: [SizedBox(
+                        height: 570,
+                        child: TabBarView(
+                          children: [
+                            Container(child:
+                              GridView.count(
+                                crossAxisCount: 2,crossAxisSpacing: 30,mainAxisSpacing: 20,
                                 children: [
-                                  Icon(Icons.accessibility_outlined,size: 90,),
-                                  Text("Pc Component",),
-                              ],
-                            ),
-                            ),
-                            Container(
-                                decoration: decoration,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(Icons.accessibility_outlined,size: 90,),
-                                    Text("Pc Component",),
-                                  ],
-                                ),
-                              )],),),
-                          Container(child: Text("Text2"),),
-                          Container(child: Text("Text3"),),
-                          Container(child: Text("Text4"),),
-                        ],),
-                      ),
+                                  ...List.generate(20, (i) => InkWell(
+                                    onTap: (){
+                                    Navigator.of(context).pop();
+                                    },
+                                    child: Container(
+                                      // width:40,height:50,
+                                      decoration: decoration,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                        Icon(Icons.accessibility_outlined,size: 40,),
+                                        Text("Pc Component",),
+                                    ],
+                                  ),
+                                  ),
+                                )),
+                             ],),),
+                            Container(child: Text("Text2"),),
+                            Container(child: Text("Text3"),),
+                            Container(child: Text("Text4"),),
+                          ],),
+                        ),]
+                    ),
                     ],
                 ),
               ),
-            ),),)
+            ),
     );
   }
 }
