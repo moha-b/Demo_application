@@ -1,4 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, unnecessary_string_interpolations, unused_import
+import 'package:application/home/homePage.dart';
 import 'package:application/page.dart';
 import 'package:application/reset_password.dart';
 import 'package:flutter/material.dart';
@@ -6,12 +7,17 @@ import 'package:flutter/widgets.dart';
 import 'login.dart';
 
 void main() {
-  runApp(MaterialApp(routes: {
-    "login": (context) => Login(),
-    "reset password": (context) => ResetPassword(),
-    "Page": (context) => PageK(),
+  runApp(MaterialApp(
+    routes: {
+      "login": (context) => Login(),
+      "reset password": (context) => ResetPassword(),
+      "Page": (context) => PageK(),
+      "home": (context) => homePage(),
     },
-      theme: ThemeData(), home: Login()));
+    theme: ThemeData(),
+    home: homePage(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
 class Test extends StatefulWidget {
@@ -27,10 +33,7 @@ class TestState extends State<Test> {
     return Scaffold(
       drawer: Drawer(),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [],
-        ),
+        child: Column(),
       ),
     );
   }
