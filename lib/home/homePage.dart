@@ -22,6 +22,7 @@ class home extends StatefulWidget {
 
 // Color Section
 Color cyan = Color(0xFF80d4cb);
+Color grey = Colors.grey;
 
 class _homeState extends State<home> {
   @override

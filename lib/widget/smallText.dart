@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, must_be_immutable
 
+import 'package:application/home/homePage.dart';
 import 'package:flutter/cupertino.dart';
 
 class SmallText extends StatelessWidget {
@@ -22,7 +23,7 @@ class SmallText extends StatelessWidget {
     return Text(
       text,
       overflow: overFlow,
-      style: TextStyle(color: color, fontSize: size, height: height),
+      style: TextStyle(color: grey, fontSize: size, height: height),
     );
   }
 }
