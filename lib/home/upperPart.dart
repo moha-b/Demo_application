@@ -12,6 +12,14 @@ class upper_body extends StatefulWidget {
   _upper_bodyState createState() => _upper_bodyState();
 }
 
+List list = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+];
+
 class _upper_bodyState extends State<upper_body> {
   PageController pageController = PageController(viewportFraction: .86);
   var pageValue = 0.0;
@@ -48,8 +56,7 @@ class _upper_bodyState extends State<upper_body> {
               borderRadius: BorderRadius.circular(30),
               color: Colors.amberAccent,
               image: DecorationImage(
-                  image: AssetImage("images/TokyoGhoul .jpg"),
-                  fit: BoxFit.cover)),
+                  image: AssetImage("${list[1]}"), fit: BoxFit.cover)),
         ),
         Align(
             child: Container(

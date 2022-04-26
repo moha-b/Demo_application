@@ -1,6 +1,6 @@
 // ignore_for_file: file_names, unused_import, camel_case_types, prefer_const_constructors_in_immutables, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:application/home/upperPart.dart';
-import 'package:application/widget/Bigtext.dart';
+import 'package:application/widget/bigText.dart';
 import 'package:application/widget/smallText.dart';
 import 'package:flutter/material.dart';
 
@@ -74,6 +74,25 @@ class _homeState extends State<home> {
                 ],
               )),
           upper_body(),
+          Container(
+            margin: EdgeInsets.only(left: 15),
+            child: Row(
+              //mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                BigText(text: "Popular"),
+                SizedBox(
+                  width: 10,
+                ),
+                SmallText(text: "."),
+                SizedBox(
+                  width: 10,
+                ),
+                SmallText(text: "Food pairing")
+              ],
+            ),
+          ),
+          Container()
         ],
       ),
     );
