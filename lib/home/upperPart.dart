@@ -56,7 +56,7 @@ class _upper_bodyState extends State<upper_body> {
               borderRadius: BorderRadius.circular(30),
               color: Colors.amberAccent,
               image: DecorationImage(
-                  image: AssetImage("${list[1]}"), fit: BoxFit.cover)),
+                  image: AssetImage("1.jpg"), fit: BoxFit.cover)),
         ),
         Align(
             child: Container(
